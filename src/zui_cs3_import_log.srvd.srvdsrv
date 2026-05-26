@@ -1,0 +1,4 @@
+@EndUserText.label: 'Import Log Service Definition'
+define service ZUI_CS3_IMPORT_LOG {
+  expose ZR_CS3_IMPORT_LOG as ImportLog;
+}

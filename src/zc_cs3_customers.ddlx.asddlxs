@@ -1,0 +1,247 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Customerid'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Customerid'
+annotate view ZC_CS3_CUSTOMERS with
+{
+  @UI.facet: [
+    {
+      label: 'Allgemeine Informationen',
+      id: 'GeneralInfo',
+      purpose: #STANDARD,
+      position: 10,
+      type: #IDENTIFICATION_REFERENCE
+    },
+    {
+      label: 'Orders',
+      id: 'Orders',
+      purpose: #STANDARD,
+      position: 20,
+      type: #LINEITEM_REFERENCE,
+      targetElement: '_Orders'
+    }
+  ]
+  @UI.identification: [
+    {
+      position: 10
+    },
+    {
+      type: #FOR_ACTION,
+      dataAction: 'createOrder',
+      label: 'Create Order',
+      position: 20
+    },
+    {
+      type: #FOR_ACTION,
+      dataAction: 'showStatistic',
+      label: 'Show Statistic',
+      position: 30
+    }
+  ]
+  @UI.lineItem: [
+    {
+      position: 10
+    },
+    {
+      type: #FOR_ACTION,
+      dataAction: 'cancelOrders',
+      label: 'Cancel Orders',
+      position: 20
+    },
+    {
+      type: #FOR_ACTION,
+      dataAction: 'showStatistic',
+      label: 'Show Statistics',
+      position: 30
+    }
+  ]
+  Customerid;
+
+  @UI.identification: [ { position: 40 } ]
+  @UI.lineItem: [ { position: 40 } ]
+  @UI.selectionField: [ { position: 40 } ]
+  Salutation;
+
+  @UI.identification: [ { position: 50 } ]
+  @UI.lineItem: [ { position: 50 } ]
+  @UI.selectionField: [ { position: 50 } ]
+  LastName;
+
+  @UI.identification: [ { position: 60 } ]
+  @UI.lineItem: [ { position: 60 } ]
+  @UI.selectionField: [ { position: 60 } ]
+  FirstName;
+
+  @UI.identification: [ { position: 70 } ]
+  @UI.lineItem: [ { position: 70 } ]
+  @UI.selectionField: [ { position: 70 } ]
+  Company;
+
+  @UI.identification: [ { position: 80 } ]
+  @UI.lineItem: [ { position: 80 } ]
+  @UI.selectionField: [ { position: 80 } ]
+  Street;
+
+  @UI.identification: [ { position: 90 } ]
+  @UI.lineItem: [ { position: 90 } ]
+  @UI.selectionField: [ { position: 90 } ]
+  City;
+
+  @UI.identification: [ { position: 100 } ]
+  @UI.lineItem: [ { position: 100 } ]
+  @UI.selectionField: [ { position: 100 } ]
+  @Consumption.valueHelpDefinition: [ {
+    entity: {
+      name: 'ZI_CS3_COUNTRY_VH',
+      element: 'Country'
+    }
+  } ]
+  Country;
+
+  @UI.identification: [ { position: 110 } ]
+  @UI.lineItem: [ { position: 110 } ]
+  @UI.selectionField: [ { position: 110 } ]
+  Postcode;
+
+  @EndUserText.label: 'Number of Orders'
+  @UI.identification: [ {
+    position: 120,
+    label: 'Number of Orders'
+  } ]
+  @UI.lineItem: [ {
+    position: 120,
+    label: 'Number of Orders'
+  } ]
+  NumberOfOrders;
+
+  @UI.identification: [ { position: 130 } ]
+  @UI.lineItem: [ { position: 130 } ]
+  @UI.selectionField: [ { position: 130 } ]
+  AccLock;
+
+  @EndUserText.label: 'LastDate'
+  @UI.identification: [ {
+    position: 140,
+    label: 'LastDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 140,
+    label: 'LastDate'
+  } ]
+  @UI.selectionField: [ { position: 140 } ]
+  LastDate;
+
+  @UI.identification: [ { position: 150 } ]
+  @UI.lineItem: [ { position: 150 } ]
+  @UI.selectionField: [ { position: 150 } ]
+  SalesVolume;
+
+  @UI.identification: [ { position: 160 } ]
+  @UI.lineItem: [ { position: 160 } ]
+  @UI.selectionField: [ { position: 160 } ]
+  SalesVolumeTarget;
+
+  @EndUserText.label: 'ChangeRateDate'
+  @UI.identification: [ {
+    position: 170,
+    label: 'ChangeRateDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 170,
+    label: 'ChangeRateDate'
+  } ]
+  @UI.selectionField: [ { position: 170 } ]
+  ChangeRateDate;
+
+  @UI.identification: [ { position: 180 } ]
+  @UI.lineItem: [ { position: 180 } ]
+  @UI.selectionField: [ { position: 180 } ]
+  Fax;
+
+  @UI.identification: [ { position: 190 } ]
+  @UI.lineItem: [ { position: 190 } ]
+  @UI.selectionField: [ { position: 190 } ]
+  Phone;
+
+  @UI.identification: [ { position: 200 } ]
+  @UI.lineItem: [ { position: 200 } ]
+  @UI.selectionField: [ { position: 200 } ]
+  Email;
+
+  @UI.identification: [ {
+    position: 210,
+    label: 'Website',
+    type: #WITH_URL,
+    url: 'Url'
+  } ]
+  @UI.lineItem: [ {
+    position: 210,
+    label: 'Website',
+    type: #WITH_URL,
+    url: 'Url'
+  } ]
+  @UI.selectionField: [ {
+    position: 210
+  } ]
+  Url;
+
+  @UI.identification: [ { position: 220 } ]
+  @UI.lineItem: [ { position: 220 } ]
+  @UI.selectionField: [ { position: 220 } ]
+  CurrencyTarget;
+
+  @UI.identification: [ { position: 230 } ]
+  @UI.lineItem: [ { position: 230 } ]
+  @UI.selectionField: [ { position: 230 } ]
+  @Consumption.valueHelpDefinition: [ {
+    entity: {
+      name: 'I_Language',
+      element: 'Language'
+    }
+  } ]
+  Language;
+
+  @UI.identification: [ { position: 240 } ]
+  @UI.lineItem: [ { position: 240 } ]
+  @UI.selectionField: [ { position: 240 } ]
+  Weblogin;
+
+  @UI.identification: [ { position: 250 } ]
+  @UI.lineItem: [ { position: 250 } ]
+  @UI.selectionField: [ { position: 250 } ]
+  Webpw;
+
+  @UI.identification: [ { position: 260 } ]
+  @UI.lineItem: [ { position: 260 } ]
+  @UI.selectionField: [ { position: 260 } ]
+  Memo;
+
+  @UI.identification: [ { position: 270 } ]
+  @UI.lineItem: [ { position: 270 } ]
+  @UI.selectionField: [ { position: 270 } ]
+  CreatedBy;
+
+  @UI.identification: [ { position: 280 } ]
+  @UI.lineItem: [ { position: 280 } ]
+  @UI.selectionField: [ { position: 280 } ]
+  CreatedAt;
+
+  @UI.identification: [ { position: 290 } ]
+  @UI.lineItem: [ { position: 290 } ]
+  @UI.selectionField: [ { position: 290 } ]
+  LocalLastChangedBy;
+
+  @UI.identification: [ { position: 300 } ]
+  @UI.lineItem: [ { position: 300 } ]
+  @UI.selectionField: [ { position: 300 } ]
+  LocalLastChangedAt;
+
+  @UI.identification: [ { position: 310 } ]
+  @UI.lineItem: [ { position: 310 } ]
+  @UI.selectionField: [ { position: 310 } ]
+  LastChangedAt;
+
+  @EndUserText.label: 'Orders'
+  _Orders;
+}

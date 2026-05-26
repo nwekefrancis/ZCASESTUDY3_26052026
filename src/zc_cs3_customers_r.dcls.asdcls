@@ -1,0 +1,12 @@
+@EndUserText.label: 'Access Control for Customers by Postcode'
+@MappingRole: true
+define role ZC_CS3_CUSTOMERS_R {
+
+  grant select on ZCS3_CUSTOMERS_R
+    where ( Postcode ) = aspect pfcg_auth(
+      ZCS3PCODE,
+      ZCS3PCODE,
+      ACTVT = '03'
+    );
+
+}

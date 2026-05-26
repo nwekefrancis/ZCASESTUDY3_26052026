@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service-Definition für ZC_CS3_CUSTORDERS'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_CS3_CUSTORDERS'
+  }
+}
+define service ZUI_Z_CS3_CUSTORDERS_O4 provider contracts odata_v4_ui {
+  expose ZC_CS3_CUSTORDERS;
+}

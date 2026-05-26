@@ -1,0 +1,27 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZC_CS3_CUSTOMERS with
+{
+  @EndUserText.label: 'VIP'
+
+  @UI.lineItem: [
+    {
+      position: 235,
+      label: 'VIP'
+    }
+  ]
+
+  @UI.identification: [
+    {
+      position: 235,
+      label: 'VIP'
+    }
+  ]
+
+  @UI.selectionField: [
+    {
+      position: 235
+    }
+  ]
+
+  Zzvip;
+}

@@ -1,0 +1,30 @@
+@Metadata.layer: #CORE
+annotate entity ZC_CS3_STATISTIC with
+{
+  @UI.identification: [{ position: 10, label: 'Interface Name' }]
+  @UI.lineItem: [
+    {
+      position: 10,
+      label: 'Interface Name'
+    },
+    {
+      type: #FOR_ACTION,
+      dataAction: 'switchImplementation',
+      label: 'Switch Implementation',
+      position: 20
+    }
+  ]
+  interface_name;
+
+  @UI.identification: [{ position: 20, label: 'Class Name' }]
+  @UI.lineItem: [{ position: 30, label: 'Class Name' }]
+  class_name;
+
+  @UI.identification: [{ position: 30, label: 'Active' }]
+  @UI.lineItem: [{ position: 40, label: 'Active' }]
+  active;
+
+  @UI.identification: [{ position: 40, label: 'Description' }]
+  @UI.lineItem: [{ position: 50, label: 'Description' }]
+  description;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Statistics Service Definition'
+define service ZUI_CS3_STATISTIC {
+  expose ZC_CS3_STATISTIC;
+}

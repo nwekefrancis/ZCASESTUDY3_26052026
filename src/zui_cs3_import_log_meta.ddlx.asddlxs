@@ -1,0 +1,74 @@
+@Metadata.layer: #CUSTOMER
+
+@UI.headerInfo: {
+    typeName: 'Import Log',
+    typeNamePlural: 'Import Logs',
+    title: { type: #STANDARD, value: 'Logid' },
+    description: { type: #STANDARD, value: 'Company' }
+}
+annotate view ZR_CS3_IMPORT_LOG with 
+{
+  /* ====================================================================== */
+  /* FACET SETUP (Defines the layout of the detailed Object Page)           */
+  /* ====================================================================== */
+  @UI.facet: [ 
+    {
+      id:       'LogDetails',
+      purpose:  #STANDARD,
+      type:     #IDENTIFICATION_REFERENCE,
+      label:    'Log Error Details',
+      position: 10
+    } 
+  ]
+
+  /* ====================================================================== */
+  /* FIELD MAPPINGS                                                         */
+  /* ====================================================================== */
+
+  @UI.lineItem:       [ { position: 10, label: 'Log ID' } ]
+  @UI.identification: [ { position: 10, label: 'Log ID' } ]
+  @UI.selectionField: [ { position: 10 } ]
+  Logid;
+
+  @UI.lineItem:       [ { position: 20, label: 'Created At' } ]
+  @UI.identification: [ { position: 20, label: 'Created At' } ]
+  @UI.selectionField: [ { position: 20 } ]
+  CreatedAt;
+
+  @UI.lineItem:       [ { position: 30, label: 'Company' } ]
+  @UI.identification: [ { position: 30, label: 'Company' } ]
+  @UI.selectionField: [ { position: 30 } ]
+  Company;
+
+  @UI.lineItem:       [ { position: 40, label: 'Message Type' } ]
+  @UI.identification: [ { position: 40, label: 'Message Type' } ]
+  @UI.selectionField: [ { position: 40 } ]
+  Mgstype;
+
+  @UI.lineItem:       [ { position: 50, label: 'Error Message' } ]
+  @UI.identification: [ { position: 50, label: 'Error Message' } ]
+  Message;
+
+  @UI.lineItem:       [ { position: 60, label: 'Field Name' } ]
+  @UI.identification: [ { position: 60, label: 'Field Name' } ]
+  Fieldname;
+
+  /* The following fields are hidden from the main table to keep it clean, 
+     but will show up when you click a row to view the Object Page. */
+
+  @UI.identification: [ { position: 70, label: 'Source Line (CSV)' } ]
+  SourceLine;
+
+  @UI.identification: [ { position: 80, label: 'Street' } ]
+  Street;
+
+  @UI.identification: [ { position: 90, label: 'Postcode' } ]
+  Postcode;
+
+  @UI.identification: [ { position: 100, label: 'City' } ]
+  City;
+
+  @UI.identification: [ { position: 110, label: 'Created By' } ]
+  CreatedBy;
+
+}
